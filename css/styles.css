@@ -1,0 +1,268 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --black-berry: #480032;
+  --wine-berry: #461a42;
+  --pizza: #fb9300;
+  --lavender-rose: #fc92e3;
+  --bahama-blue: #005792;
+  --mariner: #2978b5;
+  --cerise-red: #e31b6d;
+  --roof-terracotta: #b62121;
+  --cherub: #fae1e1;
+}
+
+/* Utiliti Classes */
+.bg-wine-berry {
+  background-color: var(--wine-berry);
+}
+.bg-pizza {
+  background-color: var(--pizza);
+}
+.bg-roof-terracotta {
+  background-color: var(--roof-terracotta);
+}
+
+/* Utiliti Classes for text color */
+.text-wine-berry {
+  color: var(--wine-berry);
+}
+.text-pizza {
+  color: var(--pizza);
+}
+.text-roof-terracotta {
+  color: var(--roof-terracotta);
+}
+
+/* Utiliti Classes for fonts */
+.fm-quicksand,
+.section-title {
+  font-family: "Quicksand", sans-serif;
+}
+.fw-400 {
+  font-weight: 400;
+}
+.fw-500 {
+  font-weight: 500;
+}
+.fw-700 {
+  font-weight: 700;
+}
+.fw-900 {
+  font-weight: 900;
+}
+.section-title {
+  font-size: 52px;
+  color: var(--wine-berry);
+}
+
+/* Custom card c-card */
+.c-card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background-color: var(--cherub);
+  box-shadow: 0px 50px 70px rgba(131, 22, 22, 0.09);
+  border-radius: 30px;
+}
+
+.c-card:first-child img {
+  transform: translateX(5%);
+}
+
+.c-card:nth-child(2) {
+  margin-top: 3em;
+}
+.c-card:nth-child(3) {
+  margin-top: 6em;
+}
+.c-card:nth-child(4) {
+  margin-top: 9em;
+}
+
+/* navbar styling */
+nav {
+  background-color: var(--wine-berry);
+}
+.navbar-toggler,
+.navbar-toggler:focus {
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+section {
+  padding: 60px 0px;
+}
+
+/* hero section */
+.hero-section {
+  height: 90vh;
+  position: relative;
+}
+
+/* hero svg styling */
+.svg-1-1,
+.svg-1-2,
+.svg-2-1,
+.svg-2-2,
+.svg-2-3,
+.svg-3-1,
+.svg-3-2,
+.svg-4-1,
+.svg-4-2,
+.character-svg {
+  position: absolute;
+}
+
+.svg-1-1 {
+  left: 4.58%;
+  bottom: 14.52%;
+}
+.svg-1-2 {
+  left: 74.1%;
+  top: 3.22%;
+}
+.svg-2-1 {
+  left: 7.29%;
+  top: 20.95%;
+}
+.svg-2-2 {
+  right: 3.26%;
+  bottom: 14.68%;
+}
+.svg-2-3 {
+  left: 46.39%;
+  right: 46.67%;
+  bottom: 14.84%;
+}
+.svg-3-1 {
+  left: 22.92%;
+  bottom: 27.68%;
+}
+.svg-3-2 {
+  right: 3.68%;
+  top: 20.44%;
+}
+.svg-4-1 {
+  left: 327px;
+  top: 3.91%;
+  opacity: 0.5;
+}
+.svg-4-2 {
+  right: 16.26%;
+  bottom: 27%;
+  opacity: 0.5;
+}
+
+.search-box {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-55%);
+  color: #fff;
+  max-width: 650px;
+  width: 100%;
+}
+
+.character-svg {
+  /* left: 73.75%; */
+  right: -10%;
+  top: 33%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+section:nth-child(3) {
+  background: url("/assets/air-line.svg") no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 75px 0px;
+}
+
+footer {
+  background-color: var(--wine-berry);
+}
+
+footer ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+footer ul li {
+  margin: 0.25em 0em;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.5s;
+}
+
+.link:hover {
+  color: var(--cerise-red);
+}
+
+.link::after {
+  position: absolute;
+  top: 100%;
+  content: "";
+  width: 0px;
+  height: 2px;
+  background: var(--cerise-red);
+  right: 0;
+  -webkit-transition: width 0.3s cubic-bezier(0.37, 0, 0.21, 1.02),
+    0.3s background;
+  transition: width 0.3s cubic-bezier(0.37, 0, 0.21, 1.02), 0.3s background;
+}
+
+.link:hover::after {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+.link img {
+  transition: transform 0.3s cubic-bezier(0.37, 0, 0.21, 1.02), 0.3s;
+}
+.link:hover img {
+  transform: translateX(5px);
+}
+
+.link.black {
+  color: inherit;
+}
+.link.black::after {
+  margin-top: 3px;
+}
+.link.black:hover::after {
+  background: #000;
+  margin-top: 3px;
+}
+
+@media only screen and (max-width: 1200px) {
+  .c-card:first-child,
+  .c-card:nth-child(2),
+  .c-card:nth-child(3),
+  .c-card:nth-child(4) {
+    margin: 0;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .c-card:first-child,
+  .c-card:nth-child(2),
+  .c-card:nth-child(3),
+  .c-card:nth-child(4) {
+    margin: 0 auto;
+  }
+}
