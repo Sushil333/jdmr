@@ -165,20 +165,20 @@ section {
   opacity: 0.5;
 }
 
+.hero-search {
+  display: grid;
+  place-items: center;
+  height: 50%;
+}
+
 .search-box {
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-55%);
   color: #fff;
   max-width: 650px;
-  width: 100%;
 }
 
 .character-svg {
-  /* left: 73.75%; */
-  right: -10%;
-  top: 33%;
+  top: -1.1em;
+  right: -3.5em;
 }
 
 body {
@@ -192,6 +192,10 @@ section:nth-child(3) {
   -o-background-size: cover;
   background-size: cover;
   padding: 75px 0px;
+}
+
+.search-btn {
+  position: relative;
 }
 
 section:nth-child(4) {
@@ -322,5 +326,9 @@ footer ul li {
 
   .mobile-carousel {
     flex-direction: column;
+  }
+
+  .hero-search {
+    height: 65%;
   }
 }
