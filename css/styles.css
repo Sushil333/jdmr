@@ -223,7 +223,7 @@ body {
 }
 
 section.home-hero {
-  background: url("/assets/air-line.svg") no-repeat center center;
+  background: url("../assets/air-line.svg") no-repeat center center;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -236,7 +236,7 @@ section.home-hero {
 }
 
 section.background-svg {
-  background: url("/assets/background.svg") no-repeat;
+  background: url("../assets/background.svg") no-repeat;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -454,7 +454,7 @@ footer ul li {
   background: rgba(0, 0, 0, 0.7);
 }
 .school-name-hero::after {
-  background: url("/assets/school-name-page/school-name-bg.svg") no-repeat
+  background: url("../assets/school-name-page/school-name-bg.svg") no-repeat
     center center;
   position: absolute;
   content: "";
