@@ -377,7 +377,12 @@ footer ul li {
 
 .card {
   overflow: hidden;
+  position: relative;
 }
+.card img {
+  height: 150px;
+}
+
 .card-body {
   background: var(--card-body);
 }
@@ -555,6 +560,9 @@ footer ul li {
     margin: 0 auto;
   }
 
+  .card img {
+    height: 120px;
+  }
   .section-title {
     font-size: 1.8em;
   }
