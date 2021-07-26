@@ -127,7 +127,7 @@ btn.bg-wine-berry:hover {
 }
 
 /* navbar styling */
-nav {
+nav.navbar {
   background-color: var(--wine-berry);
 }
 .navbar-toggler,
