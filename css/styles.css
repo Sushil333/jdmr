@@ -35,6 +35,12 @@ input.form-control {
 .bg-placeholder {
   background-color: var(--placeholder);
 }
+.bg-cherub {
+  background-color: var(--cherub);
+}
+.bg-card-body {
+  background-color: var(--card-body);
+}
 .grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -526,6 +532,57 @@ footer ul li {
 /*
 * School name page styling ends 
 */
+
+
+
+
+/* Compare page styling starts */
+.cmp-card {
+  height: 200px;
+  border: 1px solid var(--placeholder) ;
+  border-radius: 20px;
+  opacity: 1;
+  transition: opacity .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+  cursor: pointer;
+}
+
+.cmp-card.disabled {
+  opacity: .5;
+  pointer-events: none;
+}
+.cmp-card-body {
+  color: #AD1212;
+}
+
+.plus-btn {
+  height: 64px;
+  width: 64px;
+  border: 2px dashed var(--placeholder);
+  border-radius: 50%;
+  color: var(--placeholder);
+  font-size: 1.5rem;
+  transition: color, border .3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+.cmp-title {
+  position: relative;
+}
+.cmp-title::after {
+  height: 2px;
+  width: 5em;
+  background: var(--pizza);
+  content: "";
+  position: absolute;
+  bottom: -.5em;
+}
+
+
+/* Compare page styling ends */
+
+
+
+
 
 @media only screen and (max-width: 1200px) {
   .c-card:first-child,
