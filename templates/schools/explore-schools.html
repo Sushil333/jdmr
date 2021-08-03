@@ -1,0 +1,531 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Explore Schools{% endblock %}
+
+{% block body %}
+
+<!-- hero section start -->
+<section class="explore-hero">
+    <div class="explore-img">
+        <img src="{% static 'assets/explore-hero.svg' %}">
+    </div>
+    <div style="position: absolute;top: 1em; left: 3em; color: white;">
+        <nav aria-label="breadcrumb" class="d-inline">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#" class="text-link">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+            </ol>
+        </nav>
+    </div>
+    <div class="container hero-search" style="height: 45vh; z-index: 1; display: grid;
+        place-items: center;">
+        <div class="search-box">
+            <div class="search-text">
+                <h2 class="text-center mb-3 fm-quicksand fw-700">Find Best School For Your Child</h2>
+                <div class="d-flex input-group-lg">
+                    <input type="text" class="form-control fm-quicksand-regular" placeholder="Search City"
+                        style="border-radius: 999px 0px 0px 999px;">
+                    <button class="btn bg-roof-terracotta text-white fm-quicksand fw-700 search-btn"
+                        style="border-radius: 0px 999px 999px 0px;">Search
+                        <img src="{% static 'assets/hero-svgs/Character.svg' %}" class="character-svg d-none d-md-block">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <img src="{% static 'assets/explore-page/butterfly.svg' %}" class="butterfly d-none d-md-block">
+    <img src="{% static 'assets/explore-page/bubbles.svg' %}" class="bubbles d-none d-md-block">
+</section>
+<!-- hero section end -->
+
+<section class="mt-0 fm-quicksand background-svg">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 col-md-4">
+
+                <div class="filters shadow rounded bg-white mb-3 d-md-block">
+                    <div class="filters-header border-bottom p-3">
+                        <h6 class="m-0 text-dark">Filter By</h6>
+                    </div>
+                    <div class="filters-body">
+                        <div id="accordion">
+                            <div class="filters-card border-bottom p-3">
+                                <div class="filters-card-header" id="headingTwo">
+                                    <h6 class="mb-0">
+                                        <a href="#" class="btn-link d-flex justify-content-between"
+                                            data-toggle="collapse" data-target="#collapsetwo" aria-expanded="true"
+                                            aria-controls="collapsetwo">
+                                            <b>Class</b>
+                                            <i class="fas fa-angle-down float-right"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapsetwo" class="collapse show" aria-labelledby="headingTwo"
+                                    data-parent="#accordion">
+                                    <div class="filters-card-body">
+                                        <div class="button-group-pills" data-toggle="buttons">
+                                            <label class="btn btn-default active">
+                                                <input type="checkbox" name="options" checked="">
+                                                <div>Play grop</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Pre-Nursery</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Nursery</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>1</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>2</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>3</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>4</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>5</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>6</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>7</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>8</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>9</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>10</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>11</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>12</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion">
+                            <div class="filters-card border-bottom p-3">
+                                <div class="filters-card-header" id="headingThress">
+                                    <h6 class="mb-0">
+                                        <a href="#" class="btn-link d-flex justify-content-between"
+                                            data-toggle="collapse" data-target="#collapsethree" aria-expanded="true"
+                                            aria-controls="collapsethree">
+                                            <b>Board</b>
+                                            <i class="fas fa-angle-down float-right"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapsethree" class="collapse show" aria-labelledby="headingThress"
+                                    data-parent="#accordion">
+                                    <div class="filters-card-body">
+                                        <div class="button-group-pills" data-toggle="buttons">
+                                            <label class="btn btn-default active">
+                                                <input type="checkbox" name="options" checked="">
+                                                <div>CBSE</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>CISCE</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>IGCSE</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>IB</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Cambridge</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>State Board</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion">
+                            <div class="filters-card border-bottom p-3">
+                                <div class="filters-card-header" id="headingFour">
+                                    <h6 class="mb-0">
+                                        <a href="#" class="btn-link d-flex justify-content-between"
+                                            data-toggle="collapse" data-target="#collapsefour" aria-expanded="true"
+                                            aria-controls="collapsefour">
+                                            <b>School Type</b>
+                                            <i class="fas fa-angle-down float-right"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapsefour" class="collapse show" aria-labelledby="headingFour"
+                                    data-parent="#accordion">
+                                    <div class="filters-card-body">
+                                        <div class="button-group-pills" data-toggle="buttons">
+                                            <label class="btn btn-default active">
+                                                <input type="checkbox" name="options" checked="">
+                                                <div>Boys</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Girls</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Co-ed</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div id="accordion">
+                            <div class="filters-card border-bottom p-3">
+                                <div class="filters-card-header" id="headingFive">
+                                    <h6 class="mb-0">
+                                        <a href="#" class="btn-link d-flex justify-content-between"
+                                            data-toggle="collapse" data-target="#collapsefive" aria-expanded="true"
+                                            aria-controls="collapsefive">
+                                            <b>Fees</b>
+                                            <i class="fas fa-angle-down float-right"></i>
+                                        </a>
+                                    </h6>
+                                </div>
+                                <div id="collapsefive" class="collapse show" aria-labelledby="headingFive"
+                                    data-parent="#accordion">
+                                    <div class="filters-card-body">
+                                        <div class="button-group-pills" data-toggle="buttons">
+                                            <label class="btn btn-default active">
+                                                <input type="checkbox" name="options" checked="">
+                                                <div>Low to High</div>
+                                            </label>
+                                            <label class="btn btn-default">
+                                                <input type="checkbox" name="options">
+                                                <div>Hight to Low</div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-8">
+                <!-- school details card  start-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+                <!-- school details card  start-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+                <!-- school details card  start-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+                <!-- school details card  start-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+                <!-- school details card  start-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+                <div class="card flex-column flex-md-row border-0 shadow mb-4">
+                    <div class="p-3 d-flex justify-content-center align-items-center">
+                        <img src="{% static 'assets/explore-page/school-logo.png' %}" alt="school-logo">
+                    </div>
+
+                    <div class="card-body">
+                        <div class="d-flex flex-column justify-content-between flex-lg-row">
+                            <div>
+                                <h4 class="fw-700 mb-0">School Name</h4>
+                                <p class="text-muted">Address of School</p>
+                            </div>
+                            <div class="d-flex gap-2 align-items-center mb-3">
+                                <input type="checkbox" id="compare">
+                                <lable for="compare" class="fw-700"><small>Compare</small></lable>
+                            </div>
+                        </div>
+                        <div class="row fw-500">
+                            <div class="col-6 col-lg-3 mb-2">
+                                <small class="text-muted fw-700">Grade</small>
+                                <div>Nursery to 12</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Board</small>
+                                <div>CBSE</div>
+                            </div>
+                            <div class="col-6 col-lg-2 mb-2">
+                                <small class="text-muted fw-700">Type</small>
+                                <div>Co-ed</div>
+                            </div>
+                            <div class="col-6 col-lg-4 mb-2">
+                                <small class="text-muted fw-700">Student faculty ratio</small>
+                                <div>1:30</div>
+                            </div>
+                        </div>
+
+                        <div class="d-flex d-md-block float-md-end flex-column mt-2">
+                            <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- school details card  end-->
+
+                <!-- pagination start -->
+                <div class="d-flex justify-content-center align-items-center">
+                    <nav aria-label="Page navigation example" class="mt-2">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                            </li>
+                            <li class="page-item"><a class="page-link" href="#">1</a></li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- pagination ends -->
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}
