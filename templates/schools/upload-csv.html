@@ -1,6 +1,5 @@
 <form action="{% url 'upload-csv' %}" method="POST"  enctype="multipart/form-data">
     {% csrf_token %}
-    <label for="csvfile">Choose a CSV File:</label>
-    <input type="file" id="csvfile" name="csvfile" accept=".csv">
+    {{form}}
     <button type="submit">Submit</button>
 </form>

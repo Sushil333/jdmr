@@ -1,37 +1,40 @@
-from django.http.response import HttpResponseRedirect
+from django.views.generic.list import ListView
 from django.shortcuts import render, redirect
-from django.urls import reverse
 from django.contrib import messages
+from django.urls import reverse
 
-from schools.models import School, SchoolDetail, SchoolsImportFile
+from schools.forms import ImportFileForm
+from schools.models import School
 
 def index(request):
     template_name = 'schools/index.html'
     context = {}
     return render(request, template_name, context)
 
-def explore_schools(request):
-    template_name = 'schools/explore-schools.html'
-    context = {}
-    return render(request, template_name, context)
+
+class SchoolListView(ListView):
+    model = School
+    paginate_by = 5 # if pagination is desired
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        return context
+
+
+# def explore_schools(request):
+#     template_name = 'schools/explore-schools.html'
+#     schools = School.objects.all()
+#     return render(request, template_name, {'schools': schools})
 
 def upload_csv(request):
     template_name = 'schools/upload-csv.html'
-    context = {}
+    form = ImportFileForm()
 
-    if request.method == "GET":
-        return render(request, template_name, context)
+    if request.method == 'POST':
+        form = ImportFileForm(request.POST, request.FILES)
 
-    try:
-        csv_file = request.FILES['csvfile']
-
-        # if not csv_file.name.endswith('.csv'):
-        #     messages.error(request, 'THIS IS NOT A CSV FILE')
-                
-        s = SchoolsImportFile(csv_file)
-        s.save()
-    except Exception as e:
-        messages.error(request,"Unable to upload file. "+repr(e))
+        if form.is_valid():
+            form.save()
+            return redirect('explore')
+    return render(request, template_name, {'form':form})
     
-    return HttpResponseRedirect(reverse("upload-csv"))
-
