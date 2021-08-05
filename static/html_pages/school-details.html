@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <!-- Nav Start -->
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand ms-md-5" href="#">
+                <img src="./assets/logo-smartbachhe.svg">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end me-md-5" id="navbarNavAltMarkup">
+                <div class="navbar-nav gap-3">
+                    <a class="nav-link active" aria-current="page" href="#">Explore Schools</a>
+                    <a class="nav-link " href="#">Discover Localities</a>
+                    <a class="nav-link " href="#">Admission Tracker</a>
+                    <a class="nav-link " href="#">Compare Schools</a>
+                    <a class="btn btn-outline-light rounded-pill" data-toggle="modal" data-target="#exampleModal"
+                        href="#">Sign In</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- Nav End -->
+
+    <!-- hero section start -->
+    <section class="school-name-hero pt-4">
+        <div class="container">
+            <div class="text-white">
+                <nav aria-label="breadcrumb" class="d-inline">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#" class="text-link">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#" class="text-link">Explore</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">school Name</li>
+                    </ol>
+                </nav>
+            </div>
+
+            <div class="card d-inline-flex flex-row flex-no-wrap border-0 text-white" style="background: transparent">
+                <div class="p-3 d-flex justify-content-center align-items-center">
+                    <img src="./assets/explore-page/school-logo.png" alt="school-logo" class="school-logo">
+                </div>
+                <div class="d-flex flex-column justify-content-center align-items-start">
+                    <h4 class="fw-700 mb-0">School Name</h4>
+                    <p>
+                        <span><i class="fas fa-map-marker-alt"></i></span>
+                        <soan>Address of School</soan>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- hero section end -->
+
+    <!-- tabs start -->
+    <div class="container fm-quicksand">
+
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link link active fw-500" id="about-tab" data-toggle="tab" href="#about" role="tab"
+                    aria-controls="about" aria-selected="true">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="admission-tab" data-toggle="tab" href="#admission" role="tab"
+                    aria-controls="admission" aria-selected="false">Admission & Fees</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="infrastrucure-tab" data-toggle="tab" href="#infrastrucure"
+                    role="tab" aria-controls="infrastrucure" aria-selected="false">Infrastrucure & Facilities</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="extra-tab" data-toggle="tab" href="#extra" role="tab"
+                    aria-controls="extra" aria-selected="false">Extra Curricular</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="academics-tab" data-toggle="tab" href="#academics" role="tab"
+                    aria-controls="academics" aria-selected="false">Academics</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab"
+                    aria-controls="reviews" aria-selected="true">Reviews</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link fw-500" id="contact-tab" data-toggle="tab" href="#contact" role="tab"
+                    aria-controls="contact" aria-selected="false">Contact</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+
+            <!-- admission tab starts -->
+            <div class="tab-pane fade  show active" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-12 col-md-8 my-5 p-3 rounded" style="background: #FFF4E3;">
+                            <h2 class="underline d-inline-block fw-700">Reviews</h2>
+
+                            <div class="row mt-5">
+                                <div class="col-12 col-md-4 justify-content-center d-flex align-items-center">
+                                    <div>
+                                        <div
+                                            class="review-rect bg-wine-berry d-flex text-white flex-column justify-content-center align-items-center">
+                                            <h1 class="m-0">5.0</h1>
+                                            <small>out of 5</small>
+                                        </div>
+                                        <div class="d-flex justify-content-evenly">
+                                            <div class="align-middle mt-2 bg-wine-berry rating-star">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                            <div class="align-middle mt-2 bg-wine-berry rating-star">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                            <div class="align-middle mt-2 bg-wine-berry rating-star">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                            <div class="align-middle mt-2 bg-wine-berry rating-star">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                            <div class="align-middle mt-2 bg-wine-berry rating-star">
+                                                <i class="fas fa-star text-white"></i>
+                                            </div>
+                                        </div>
+                                        <h5 class="mt-2 text-center">LOREM IPSUM</h5>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-md-8">
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <div><i class="fas fa-star"></i></div>
+                                        <h6 class="mt-2 fw-700">5</h6>
+                                        <div class="progress" style="height: 10px; width: 100%;">
+                                            <div class="progress-bar bg-wine-berry" role="progressbar"
+                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <h6 class="mt-2 fw-700">100%</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <div><i class="fas fa-star"></i></div>
+                                        <h6 class="mt-2 fw-700">5</h6>
+                                        <div class="progress" style="height: 10px; width: 100%;">
+                                            <div class="progress-bar bg-wine-berry" role="progressbar"
+                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <h6 class="mt-2 fw-700">100%</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <div><i class="fas fa-star"></i></div>
+                                        <h6 class="mt-2 fw-700">5</h6>
+                                        <div class="progress" style="height: 10px; width: 100%;">
+                                            <div class="progress-bar bg-wine-berry" role="progressbar"
+                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <h6 class="mt-2 fw-700">100%</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <div><i class="fas fa-star"></i></div>
+                                        <h6 class="mt-2 fw-700">5</h6>
+                                        <div class="progress" style="height: 10px; width: 100%;">
+                                            <div class="progress-bar bg-wine-berry" role="progressbar"
+                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <h6 class="mt-2 fw-700">100%</h6>
+                                    </div>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <div><i class="fas fa-star"></i></div>
+                                        <h6 class="mt-2 fw-700">5</h6>
+                                        <div class="progress" style="height: 10px; width: 100%;">
+                                            <div class="progress-bar bg-wine-berry" role="progressbar"
+                                                style="width: 25%;" aria-valuenow="25" aria-valuemin="0"
+                                                aria-valuemax="100"></div>
+                                        </div>
+                                        <h6 class="mt-2 fw-700">100%</h6>
+                                    </div>
+
+                                </div>
+                            </div>
+
+
+                            <div class="mt-3">
+                                <h5 class="mb-0 fw-700">RATE YOUR EXPERIENCE</h5>
+                                <div class="d-inline-flex justify-content-evenly gap-2 ms-2 mb-3">
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                </div>
+
+                                <form action="" class="d-flex flex-column gap-3 mb-3">
+                                    <textarea rows="3"></textarea>
+                                    <div class="d-block">
+                                        <button type="submit"
+                                            class="btn btn-sm bg-wine-berry text-white fw-700">Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <h5 class="mt-5 fw-700">School Reviews</h5>
+                            <div class="review-card shadow p-3 bg-light rounded">
+                                <div class="d-flex gap-2 mb-2">
+                                    <div class="initial align-middle bg-placeholder rounded py-2 px-4">
+                                        <h2 class="fw-700 m-0 p-0">U</h2>
+                                    </div>
+                                    <div>
+                                        <h5 class="mb-0">Name</h5>
+                                        <p class="fw-500 text-muted">Wropte on date,time</h4>
+                                    </div>
+                                </div>
+
+                                <div class="d-inline-flex justify-content-evenly gap-2">
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                    <div class="align-middle mt-2 bg-wine-berry rating-star inactive">
+                                        <i class="fas fa-star text-white"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12 col-md-4 d-flex flex-column justify-content-end">
+                            <img src="./assets/school-name-page/school-review.png" alt="school-reviews" class="mb-5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- admission tab ends -->
+
+            <!-- about tab starts -->
+            <div class="tab-pane fade" id="about" role="tabpanel" aria-labelledby="about-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <p class="fw-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus
+                            sequi quas
+                            voluptatem iste accusantium. Perspiciatis illo non explicabo, reprehenderit odio corrupti
+                            aperiam eius! Molestiae, nam? Aut hic error a.
+                            Ullam quae quasi earum quam incidunt nulla qui doloremque totam porro atque quia odit,
+                            praesentium eligendi laborum soluta nesciunt magni dolore ad est repudiandae similique
+                            inventore amet maxime beatae! Eveniet!
+                            Laboriosam, saepe? Labore ea nulla facilis assumenda expedita adipisci ratione est
+                            blanditiis officiis asperiores? Quae voluptatibus facilis deleniti voluptas ea perferendis
+                            accusantium asperiores beatae. Ipsam nam neque ipsum deleniti laudantium!
+                        </p>
+
+                        <h5 class="fw-700 mt-5">Basic fact about School Name</h5>
+                        <div class="grid-3 mb-4">
+                            <!-- Established Year -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/establish-badge.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">Established Year</h6>
+                                    <h6 class="fw-700">2000</h6>
+                                </div>
+                            </div>
+
+                            <!-- school type -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/school-type.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">School Type</h6>
+                                    <h6 class="fw-700">Private School</h6>
+                                </div>
+                            </div>
+
+                            <!-- Management -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/management.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">Management</h6>
+                                    <h6 class="fw-700">ABCD Trust</h6>
+                                </div>
+                            </div>
+
+                            <!-- Gender -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/establish-badge.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">Gender</h6>
+                                    <h6 class="fw-700">Co-ed</h6>
+                                </div>
+                            </div>
+
+                            <!-- Boarding -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/establish-badge.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">Boarding</h6>
+                                    <h6 class="fw-700">Day Boarding</h6>
+                                </div>
+                            </div>
+
+                            <!-- Grade -->
+                            <div class="d-flex flex-row gap-3 align-items-center my-2">
+                                <img height="48px" width="48px" src="./assets/school-name-page/establish-badge.svg">
+                                <div>
+                                    <h6 class="fw-700 text-muted">Grade</h6>
+                                    <h6 class="fw-700">Nursery - 12</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="fw-500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores temporibus
+                            sequi quas
+                            voluptatem iste accusantium. Perspiciatis illo non explicabo, reprehenderit odio corrupti
+                            aperiam eius! Molestiae, nam? Aut hic error a.
+                            Ullam quae quasi earum quam incidunt nulla qui doloremque totam porro atque quia odit,
+                            praesentium eligendi laborum soluta nesciunt magni dolore ad est repudiandae similique
+                            inventore amet maxime beatae! Eveniet!
+                            Laboriosam, saepe? Labore ea nulla facilis assumenda expedita adipisci ratione est
+                            blanditiis officiis asperiores? Quae voluptatibus facilis deleniti voluptas ea perferendis
+                            accusantium asperiores beatae. Ipsam nam neque ipsum deleniti laudantium!
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <!-- about tab ends -->
+
+            <!-- admission tab starts -->
+            <div class="tab-pane fade" id="admission" role="tabpanel" aria-labelledby="admission-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <h4 class="fw-700 text-center">ADMISSION DETAILS</h4>
+
+                        <p class="fw-500">
+                            The School has students enrolled from Nursery to !2 . Find below the admission schedule,
+                            procedure, Contact Details, documents required and instructions for parents for SCHOOL NAME,
+                            City Admission.
+                            <br><br>
+                            In this section, we will answer the common questions like What is the admission process like
+                            and what are the key dates? Is their any admission test? Will School also hold an interview
+                            or an interaction? What is the age criterion for admission to SCHOOL NAME, CIty for the
+                            upcoming academic year?
+                        </p>
+
+                        <h5 class="fw-700">Age Criteria</h5>
+                        <p class="fw-500">Age criteria of various programs offered at school. Each program has a
+                            specific age criteria and it is as follows</p>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                            <li>Lorem ipsum dolor sit amet</li>
+                        </ul>
+
+                        <h4 class="fw-700 text-center mt-5">FEES DETAILS</h4>
+                        <p class="fw-500">SCHOOL NAME Fees: Fee Structure & Details
+                            Refer below for SCHOOL NAME, CITY fee structure and current fees</p>
+                    </div>
+                </section>
+            </div>
+            <!-- admission tab ends -->
+
+            <!-- infrastrucure tab starts -->
+            <div class="tab-pane fade" id="infrastrucure" role="tabpanel" aria-labelledby="infrastrucure-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <p class="fw-500">
+                            The Sri Venkateshwara Kids, Ayanavaram campus is spread over acres of land in Ayanavaram
+                            area of
+                            Chennai, Tamil Nadu. The School is a Day School. The School's infrastructure includes but is
+                            not
+                            limited to:
+                        </p>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">SPORTS FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/available.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/available.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/available.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/available.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">EDUCATION FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">CLASSROOM FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">VISUAL AND ARTS FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">LABORATORY FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">TRANSPORT FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="features my-5">
+                            <div class="features-title d-flex justify-content-between align-items-center">
+                                <h5 class="fw-700">BOARDING FACILITIES</h5>
+                                <h5>(2/4)</h5>
+                            </div>
+                            <div class="feature-border"></div>
+                            <div class="feature-list mt-4 grid-responsive">
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                                <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                    <img src="./assets/school-name-page/unavailable.svg">
+                                    <span class="fw-500">Arobics</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- infrastrucure tab ends -->
+
+            <!-- extra tab starts -->
+            <div class="tab-pane fade" id="extra" role="tabpanel" aria-labelledby="extra-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <p class="fw-500">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla consectetur purus nulla
+                            massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam faucibus vulputate.
+                            Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante volutpat turpis turpis
+                            pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas iaculis sit. Eu enim,
+                            in bibendum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
+                            consectetur purus nulla massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam
+                            faucibus vulputate. Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante
+                            volutpat turpis turpis pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas
+                            iaculis sit. Eu enim, in bibendum elit.
+                        </p>
+
+                        <div class="grid-responsive">
+                            <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                <img src="./assets/school-name-page/available.svg">
+                                <span class="fw-500">Arobics</span>
+                            </div>
+                            <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                <img src="./assets/school-name-page/available.svg">
+                                <span class="fw-500">Arobics</span>
+                            </div>
+                            <div class="feature-item d-flex gap-2 align-items-center m-1 m-md-2">
+                                <img src="./assets/school-name-page/available.svg">
+                                <span class="fw-500">Arobics</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- extra tab ends -->
+
+            <!-- academics tab starts -->
+            <div class="tab-pane fade" id="academics" role="tabpanel" aria-labelledby="academics-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <div class="d-flex justify-content-between mb-5">
+                            <div>
+                                <h5 class="fw-700 m-0">
+                                    School Timings and Vacation
+                                </h5>
+                                <p class="fw-500">lorem ipsum dolor sit amut</p>
+                            </div>
+                            <div>
+                                <div class="d-flex gap-3">
+                                    <img src="./assets/school-name-page/language-icon.svg" height="64px" width="64px">
+                                    <div>
+                                        <h5 class="fw-700 m-0">
+                                            School Timings and Vacation
+                                        </h5>
+                                        <p class="fw-500">lorem ipsum dolor sit amut</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <h5 class="fw-700 m-0">
+                            School Senior Secondary Streams
+                        </h5>
+                        <p class="fw-700 m-0 mb-2">
+                            School Level & Classes
+                        </p>
+                        <p class="fw-500">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla consectetur purus nulla
+                            massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam faucibus vulputate.
+                            Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante volutpat turpis turpis
+                            pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas iaculis sit. Eu enim,
+                            in bibendum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
+                            consectetur purus nulla massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam
+                            faucibus vulputate. Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante
+                            volutpat turpis turpis pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas
+                            iaculis sit. Eu enim, in bibendum elit.
+                        </p>
+
+                        <h5 class="fw-700 mt-5">
+                            School Senior Secondary Streams
+                        </h5>
+                        <p class="fw-500">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla consectetur purus nulla
+                            massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam faucibus vulputate.
+                            Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante volutpat turpis turpis
+                            pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas iaculis sit. Eu enim,
+                            in bibendum elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fringilla
+                            consectetur purus nulla massa nibh. Arcu, facilisis cras elit massa porttitor posuere quam
+                            faucibus vulputate. Tempus, porttitor et, nulla consequat, lobortis diam fermentum. Ante
+                            volutpat turpis turpis pulvinar mauris, vel. Pharetra, vulputate bibendum dignissim egestas
+                            iaculis sit. Eu enim, in bibendum elit.
+                        </p>
+                    </div>
+            </div>
+            <!-- academics tab ends -->
+
+            <!-- contact tab starts -->
+            <div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
+                <section class="p-0">
+                    <div style="background: #FFF4E3;" class="py-5 px-4">
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="contact-icon shadow">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fw-700 m-0">Phone Number</h6>
+                                <p class="fw-500">1234567890</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="contact-icon shadow">
+                                <i class="fas fa-at"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fw-700 m-0">Email</h6>
+                                <p class="fw-500">school@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="contact-icon shadow">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fw-700 m-0">Website</h6>
+                                <p class="fw-500">www.website.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex gap-3 mb-3">
+                            <div class="contact-icon shadow">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="d-flex flex-column">
+                                <h6 class="fw-700 m-0">Location</h6>
+                                <p class="fw-500" style="width: 50%;">Lorem ipsum dolor sit amet, consectetur adipiscing
+                                    elit. Fringilla
+                                    consectetur purus nulla massa nibh. Arcu, facilisis cras elit massa </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <!-- contact tab ends -->
+        </div>
+    </div>
+    <!-- tabs end -->
+
+
+    <!-- similar schools starts -->
+    <section class="fm-quicksand">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="d-none d-lg-block col-md-6">
+                    <img src="./assets/school-name-page/school-bus.svg" alt="school-bus">
+                </div>
+                <div class="col-12 col-md-12 col-lg-6">
+                    <div style="background: #FFF4E3;" class="py-4 rounded">
+                        <h2 class="fw-900 text-center">Find Similar Schools</h2>
+
+                        <div class="grid-2 p-2">
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                            <div class="d-flex flex-row card border-0 shadow-sm align-items-center m-2">
+                                <img src="./assets/school-name-page/school-logo.png" alt="school-logo">
+                                <a href="#" class="link">School Name</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- similar schools ends -->
+
+    <!-- SignIn Modal Start -->
+    <div class="modal fade fm-quicksand" id="exampleModal" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center gap-3">
+                    <button class="btn facebook-btn d-flex align-items-center">
+                        <i class="fab fa-facebook-f text-white mx-2 mx-md-3"></i>
+                        <span class="mx-1 mx-md-3 text-white fw-500">Continue with facebook</span>
+                    </button>
+                    <button class="btn google-btn d-flex align-items-center">
+                        <i class="fab fa-google text-white mx-2 mx-md-3"></i>
+                        <span class="mx-2 mx-md-3 text-white fw-500">Continue with google</span>
+                    </button>
+                </div>
+
+
+                <form class="d-flex flex-column gap-3 px-3">
+                    <div class="form-group">
+                        <label for="emailInput"><b>Email address</b></label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailInput">
+                        <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                            else.</small> -->
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput"><b>Password</b></label>
+                        <input type="password" class="form-control" id="passwordInput">
+                    </div>
+                    <div class="form-check">
+                        <input type="checkbox" class="form-check-input" id="Check1">
+                        <label class="form-check-label" for="Check1">Remember Me</label>
+                    </div>
+                    <p class="fw-500">
+                        By signing in, you agree to our Terms and confirm you have read our Privacy Policy.
+                    </p>
+                    <button type="submit" class="btn bg-wine-berry text-white">Sign In</button>
+                </form>
+
+                <div class="modal-footer justify-content-center">
+                    <div>Don’t have account? <a href="#">Sign Up</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SignIn Modal End -->
+
+    <!-- Footer Start -->
+    <footer class="py-5 text-white">
+        <div class="container">
+            <div class="row">
+                <div class="col-6 col-lg-3 col-md-3 mb-4 mb-md-0">
+                    <h3 class="mb-md-3">Company</h3>
+                    <ul>
+                        <li><a href="#" class="link">About Us</a></li>
+                        <li><a href="#" class="link">Partners</a></li>
+                        <li><a href="#" class="link">Team blogs</a></li>
+                        <li><a href="#" class="link">Engineering blogs</a></li>
+                        <li><a href="#" class="link">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 col-md-3 mb-4 mb-md-0">
+                    <h3 class="mb-md-3">Resources</h3>
+                    <ul>
+                        <li><a href="#" class="link">Marketing blogs</a></li>
+                        <li><a href="#" class="link">Chrome toolbar</a></li>
+                        <li><a href="#" class="link">Case studies</a></li>
+                        <li><a href="#" class="link">Video & Webiner</a></li>
+                        <li><a href="#" class="link">Free tools</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 col-md-3 mb-4 mb-md-0">
+                    <h3 class="mb-md-3">Help & Support</h3>
+                    <ul>
+                        <li><a href="#" class="link">Contact Us</a></li>
+                        <li><a href="#" class="link">Help desk</a></li>
+                        <li><a href="#" class="link">Software Updates</a></li>
+                    </ul>
+                </div>
+                <div class="col-6 col-lg-3 col-md-3 mb-4 mb-md-0">
+                    <h3 class="mb-md-3">Product</h3>
+                    <ul>
+                        <li><a href="#" class="link">Features</a></li>
+                        <li><a href="#" class="link">Pricing</a></li>
+                        <li><a href="#" class="link">FAQs</a></li>
+                        <li><a href="#" class="link">Knwolegde base</a></li>
+                        <li><a href="#" class="link">A/B Testing Guide</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer End -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

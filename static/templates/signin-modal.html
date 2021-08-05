@@ -1,0 +1,51 @@
+<!-- SignIn Modal Start -->
+<div class="modal fade fm-quicksand" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sign In</h5>
+                <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body d-flex flex-column justify-content-center gap-3">
+                <button class="btn facebook-btn d-flex align-items-center">
+                    <i class="fab fa-facebook-f text-white mx-2 mx-md-3"></i>
+                    <span class="mx-1 mx-md-3 text-white fw-500">Continue with facebook</span>
+                </button>
+                <button class="btn google-btn d-flex align-items-center">
+                    <i class="fab fa-google text-white mx-2 mx-md-3"></i>
+                    <span class="mx-2 mx-md-3 text-white fw-500">Continue with google</span>
+                </button>
+            </div>
+
+
+            <form class="d-flex flex-column gap-3 px-3">
+                <div class="form-group">
+                    <label for="emailInput"><b>Email address</b></label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailInput">
+                    <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small> -->
+                </div>
+                <div class="form-group">
+                    <label for="passwordInput"><b>Password</b></label>
+                    <input type="password" class="form-control" id="passwordInput">
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="Check1">
+                    <label class="form-check-label" for="Check1">Remember Me</label>
+                </div>
+                <p class="fw-500">
+                    By signing in, you agree to our Terms and confirm you have read our Privacy Policy.
+                </p>
+                <button type="submit" class="btn bg-wine-berry text-white">Sign In</button>
+            </form>
+
+            <div class="modal-footer justify-content-center">
+                <div>Don’t have account? <a href="#">Sign Up</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SignIn Modal End -->
