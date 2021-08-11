@@ -12,6 +12,7 @@ class School(models.Model):
     board = models.CharField(max_length=500)
     co_ed_status = models.CharField(max_length=500)
     ownership = models.CharField(max_length=500)
+    verified = models.BooleanField(default=False)
 
     def __str__(self):
         return f"{self.school_name}"

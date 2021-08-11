@@ -4,8 +4,13 @@
 {% block title %}Explore Schools{% endblock %}
 {% block style %}
 <style>
+    *::after, *::before, * {
+        box-sizing: border-box;
+    }
     .card {
         height: 230px;
+        position: relative;
+        overflow: hidden;
     }
 
     #left {
