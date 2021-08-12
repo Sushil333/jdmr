@@ -4,9 +4,12 @@
 {% block title %}Explore Schools{% endblock %}
 {% block style %}
 <style>
-    *::after, *::before, * {
+    *::after,
+    *::before,
+    * {
         box-sizing: border-box;
     }
+
     .card {
         height: 230px;
         position: relative;
@@ -30,6 +33,18 @@
         #left {
             width: 100%;
         }
+    }
+
+    .stretched-link::after {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+        pointer-events: auto;
+        content: "";
+        background-color: rgba(0, 0, 0, 0);
     }
 </style>
 {% endblock %}
@@ -325,6 +340,7 @@
                             <a href="#" class="btn bg-wine-berry btn-dark text-uppercase fw-700">Apply Now</a>
                         </div>
                     </div>
+                    <a href="{% url 'school_details' school.id %}" class="stretched-link"></a>
                 </div>
                 {% empty %}
                 <h5 class="text-center">No Data Available</h5>
@@ -349,10 +365,10 @@
                             </li>
                             {% endif %}
 
-                            <li class="page-item">
-                                <span class="page-link">
-                                    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
-                                </span>
+                            <li class=" page-item">
+                                    <span class="page-link">
+                                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+                                    </span>
                             </li>
 
                             {% if page_obj.has_next %}

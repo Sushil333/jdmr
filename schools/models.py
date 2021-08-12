@@ -19,7 +19,7 @@ class School(models.Model):
 
 
 class SchoolDetail(models.Model):
-    school = models.ForeignKey(School, on_delete=models.CASCADE)
+    school = models.ForeignKey(School, related_name='school', on_delete=models.CASCADE)
     phone_no = models.CharField(max_length=500)
     webiste = models.CharField(max_length=500)
     email = models.CharField(max_length=500)
@@ -67,7 +67,7 @@ def add_records_to_schools_from_import_file(sender, instance, **kwargs):
         reader = csv.DictReader(f)
         for row in reader:
             school_name = row['school_name']
-            address = row['address'].replace('', '').replace('', '')
+            address = row['address'].strip('').strip('')
             board = row['Board']
             ownership = row['Ownership']
             co_ed = row['Co-Ed Status']
@@ -75,17 +75,17 @@ def add_records_to_schools_from_import_file(sender, instance, **kwargs):
             phone_no=row['phone_no']
             email=row['email']
             webiste=row['website']
-            gallery=row['gallery'].replace('[', '').replace(']', '')
-            hall_of_fame=row['hall_of_fame'].replace('[', '').replace(']', '')
-            disabled_friendly=row['Disabled Friendly'].replace('[', '').replace(']', '')
-            lab=row['Lab'].replace('[', '').replace(']', '')
-            sports_and_fitness=row['Sports and Fitness'].replace('[', '').replace(']', '')
-            infrasturcure = row['Infrastructure'].replace('[', '').replace(']', '')
-            safty_and_security = row['Safety and Security'].replace('[', '').replace(']', '')
-            advance_facilities = row['Advanced Facilities'].replace('[', '').replace(']', '')
-            extra_curricular = row['Extra Curricular'].replace('[', '').replace(']', '')
-            boarding = row['Boarding'].replace('[', '').replace(']', '')
-            class_type = row['Class'].replace('[', '').replace(']', '')
+            gallery=row['gallery'].strip('[').strip(']').replace("'","")
+            hall_of_fame=row['hall_of_fame'].strip('[').strip(']').replace("'","")
+            disabled_friendly=row['Disabled Friendly'].strip('[').strip(']').replace("'","")
+            lab=row['Lab'].strip('[').strip(']').replace("'","")
+            sports_and_fitness=row['Sports and Fitness'].strip('[').strip(']').replace("'","")
+            infrasturcure = row['Infrastructure'].strip('[').strip(']').replace("'","")
+            safty_and_security = row['Safety and Security'].strip('[').strip(']').replace("'","")
+            advance_facilities = row['Advanced Facilities'].strip('[').strip(']').replace("'","")
+            extra_curricular = row['Extra Curricular'].strip('[').strip(']').replace("'","")
+            boarding = row['Boarding'].strip('[').strip(']').replace("'","")
+            class_type = row['Class'].strip('[').strip(']').replace("'","")
             campus_type = row['Campus Type']
             campus_size = row['Campus Size']
             yoe=row['Year of Establishment']
