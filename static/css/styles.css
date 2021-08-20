@@ -432,9 +432,25 @@ footer ul li {
 /*
 *  Model Styling Start 
 */
-.modal-header {
-  background-color: var(--placeholder);
+/* .modal-header {
+  position: absolute;
+  top: -1.8em;
+  left: 50%;
+  right: 50%;
+  width: 70%;
+  transform: translateX(-50%);
+  border: none;
+  background-color: #0277bd;
 }
+
+.nav-pills .nav-link {
+  background-color: transparent;
+  color: #fff;
+}
+.nav-pills .nav-link.active {
+  background-color: rgba(0,0,0,.2);
+  color: #fff;
+} */
 
 .facebook-btn {
   background-color: #3b5998;
@@ -446,7 +462,12 @@ footer ul li {
 /* 
 *  Model Styling End 
 */
-
+.error-list {
+  margin: 0;
+  padding: .5em 2em;
+  color: red;
+  font-size: .8em;
+}
 /*
 * School name page styling starts 
 */

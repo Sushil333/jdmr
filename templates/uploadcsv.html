@@ -1,0 +1,14 @@
+<div class="modal-header">
+    <h5 class="modal-title" id="exampleModalLabel">Select a CSV File</h5>
+    <button type="button" class="close btn" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<div class="model-body">
+    <form class="d-flex flex-column gap-3 mt-2 mb-3 px-3" action="{% url 'upload-csv' %}" method="POST"
+        enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit" class="btn btn-primary btn-sm">Submit</button>
+    </form>
+</div>

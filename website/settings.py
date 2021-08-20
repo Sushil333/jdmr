@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-lfz21&+(_5ke-d&^k#6=a(*7$wa-3+kvi*8nj-@cb%o!5le+7s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['temptask.herokuapp.com', 'localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -39,7 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+
+    'bootstrap_modal_forms',
+    'widget_tweaks',
+
     'schools',
+    'accounts',
 ]
 
 MIDDLEWARE = [
@@ -106,6 +111,11 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+AUTH_USER_MODEL = 'accounts.User'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
+
 
 
 # Internationalization

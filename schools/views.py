@@ -38,7 +38,6 @@ class SchoolDetailView(DetailView):
 #     return render(request, template_name, {'schools': schools})
 
 from django.core.paginator import Paginator
-@staff_member_required()
 def upload_csv(request):
     template_name = 'schools/upload-csv.html'
     form = ImportFileForm()

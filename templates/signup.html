@@ -1,0 +1,66 @@
+{% load widget_tweaks %}
+<div class="modal-header bg-placeholder">
+    <h3 class="modal-title">Create a new account</h3>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+</div>
+
+<div class="modal-body">
+
+    <div class="d-flex flex-column justify-content-center gap-3">
+        <button class="btn facebook-btn d-flex align-items-center">
+            <i class="fab fa-facebook-f text-white mx-2 mx-md-3"></i>
+            <span class="mx-1 mx-md-3 text-white">Continue with facebook</span>
+        </button>
+        <button class="btn google-btn d-flex align-items-center">
+            <i class="fab fa-google text-white mx-2 mx-md-3"></i>
+            <span class="mx-2 mx-md-3 text-white">Continue with google</span>
+        </button>
+    </div>
+    <small class="fw-700 text-center d-block my-3">or</small>
+
+    <form method="post" class="d-flex flex-column">
+        {% csrf_token %}
+
+        {% if form.non_field_errors %}
+        <div class="invalid alert alert-warning alert-dismissible fade show mt-2" role="alert">
+            {% for error in form.non_field_errors %}
+            {{ error }}
+            {% endfor %}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+
+        {% for field in form %}
+        <div class="form-group mb-3">
+            <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+            {% render_field field class="form-control" placeholder=field.label %}
+            {% if field.errors %}
+            <ul class="invalid text-danger mt-1 m-0">
+                {% for error in field.errors %}
+                <li class=""><small>{{ error }}</small></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endfor %}
+
+        <!-- Hidden input field for custom redirection after successful login -->
+        <div class="mb-3">
+            <input type="hidden" name="next" value="{{ success_url }}">
+            <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="Check1">
+                <label class="form-check-label" for="Check1">Remember Me</label>
+            </div>
+            <small class="text-muted">
+                By signing in, you agree to our Terms and confirm you have read our Privacy Policy.
+            </small>
+        </div>
+        <button type="submit" class="btn bg-wine-berry text-white" formnovalidate="formnovalidate">Singup</button>
+    </form>
+
+
+</div>
+
+<div class="model-footer text-center mb-3">
+    Already have an Account? <span class="link" role="button" id="signup-link">Login</span>
+</div>

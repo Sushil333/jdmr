@@ -1,0 +1,25 @@
+{% load static %}
+<!-- Nav Start -->
+<nav class="navbar navbar-expand-md navbar-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand ms-md-5" href="#">
+            <img src="{% static 'assets/logo-smartbachhe.svg' %}">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end me-md-5" id="navbarNavAltMarkup">
+            <div class="navbar-nav gap-3">
+                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
+                <a class="nav-link" aria-current="page" href="{% url 'explore' %}">Explore Schools</a>
+                <a class="nav-link " href="#">Discover Localities</a>
+                <a class="nav-link " href="#">Admission Tracker</a>
+                <a class="nav-link " href="#">Compare Schools</a>
+
+                <button class="btn rounded-pill btn btn-outline-light" id="login-btn">Login</button>
+            </div>
+        </div>
+    </div>
+</nav>
+<!-- Nav End -->

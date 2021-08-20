@@ -2,16 +2,20 @@ from django.db import models
 from django.dispatch import receiver
 from django.db.models.signals import post_save
 from django.conf import settings
+from django.contrib.auth.models import User
+from django.core.validators import MinValueValidator, MaxValueValidator
 
 import os, csv
 
 class School(models.Model):
     school_name = models.CharField(max_length=500)
-    school_logo = models.CharField(max_length=500)
+    school_image = models.CharField(max_length=999)
     address = models.CharField(max_length=500)
-    board = models.CharField(max_length=500)
-    co_ed_status = models.CharField(max_length=500)
-    ownership = models.CharField(max_length=500)
+    board = models.CharField(max_length=50)
+    co_ed_status = models.CharField(max_length=50)
+    ownership = models.CharField(max_length=50)
+    sf_ratio = models.CharField(max_length=50)
+    class_offered = models.CharField(max_length=50)
     verified = models.BooleanField(default=False)
 
     def __str__(self):
@@ -40,6 +44,7 @@ class SchoolDetail(models.Model):
 
     def __str__(self):
         return f"{self.school.school_name}"
+
 
 class SchoolsImportFile(models.Model):
     # upload to MEDIA_ROOT/temp
@@ -71,6 +76,9 @@ def add_records_to_schools_from_import_file(sender, instance, **kwargs):
             board = row['Board']
             ownership = row['Ownership']
             co_ed = row['Co-Ed Status']
+            sf_ratio=row['sf_ratio']
+            school_image=row['school_image']
+            class_offered=row['class_offered']
 
             phone_no=row['phone_no']
             email=row['email']
@@ -99,7 +107,9 @@ def add_records_to_schools_from_import_file(sender, instance, **kwargs):
                 board=board,
                 co_ed_status=co_ed,
                 ownership=ownership,
-                school_logo=gallery.split(",")[0].replace("'","")
+                school_image=school_image,
+                sf_ratio=sf_ratio,
+                class_offered=class_offered
                 )
 
             SchoolDetail.objects.update_or_create(
@@ -122,3 +132,15 @@ def add_records_to_schools_from_import_file(sender, instance, **kwargs):
                 campus_size=campus_size,
                 year_of_establishment=yoe,
             )
+
+
+class SchoolReviews(models.Model):
+    rating = models.IntegerField(validators=[MinValueValidator(1),MaxValueValidator(5)])
+    comment = models.CharField(max_length=999)
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+
+    def __str__(self):
+        return f"{self.user}"
+
+    class Meta:
+        verbose_name_plural = "School Reviews"
